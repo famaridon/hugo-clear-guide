@@ -1,0 +1,9 @@
+<pre 
+    {{ if .Attributes.cli }}
+        class="command-line" 
+        {{ if .Attributes.user }}data-user="{{.Attributes.user}}"{{end}}
+        {{ if .Attributes.host }}data-host="{{.Attributes.host}}"{{end}}
+        {{ if .Attributes.prompt }}data-prompt="{{.Attributes.prompt}}"{{end}}
+        {{ if .Attributes.output }}data-output="{{.Attributes.output}}"{{end}}
+    {{ end }}>
+<code class="language-{{.Type}}" >{{- .Inner }}</code></pre>

@@ -1,0 +1,36 @@
+<figure>
+{{- if or 
+    (strings.HasSuffix .Destination "mp4" ) 
+    (strings.HasSuffix .Destination "ogv" ) 
+    (strings.HasSuffix .Destination "webm" ) 
+-}}
+<video controls width="600px">
+    <source 
+        src="{{ .Destination }}" 
+        {{- $mediatype := "" -}}
+        {{- if strings.HasSuffix .Destination "mp4" -}}
+           {{- $mediatype = "video/mp4" -}}
+        {{- else if strings.HasSuffix .Destination "ogv" -}}
+            {{- $mediatype = "video/ogg" -}}
+        {{- else if strings.HasSuffix .Destination "webm" -}}
+            {{- $mediatype = "video/webm" -}}
+        {{- end -}}
+        type="{{ $mediatype }}"
+        />
+</video>"
+{{- else if strings.HasPrefix .Destination "https://s.icepanel.io" }}
+<iframe src="{{ .Destination }}" height="800px" width="100%" title="{{ .Title }}" style="border-radius: 16px; border: none"></iframe>
+<figcaption>
+    <a href="{{ .Destination }}">Open in Icepanel</a>
+</figcaption>
+
+{{- else if strings.HasPrefix .Destination "https://www.youtube.com" }}
+<iframe width="560" height="315" src="{{ .Destination }}" title="{{ .Title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+{{- else -}}
+<img src="{{ .Destination }}" alt="{{ .Text }}" />
+{{- end -}}
+{{- if .Title -}}
+<figcaption>{{ .Title }}</figcaption>
+{{- end -}}
+</figure>

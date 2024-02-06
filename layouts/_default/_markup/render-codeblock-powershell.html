@@ -1,0 +1,7 @@
+<pre
+  {{ if .Attributes.cli }}
+    class="command-line"
+    data-prompt="{{ .Attributes.prompt | default "PS C:\\" }}"
+    {{ if .Attributes.output }}data-output="{{.Attributes.output}}"{{end}}
+  {{ end }}
+><code class="language-{{.Type}}" >{{- .Inner }}</code></pre>
