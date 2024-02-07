@@ -4,11 +4,11 @@ Documentation available at https://famaridon.github.io/hugo-clear-guide/
 
 * [x] Search
 * [x] Navbar
-* [] Sidenav
+* [ ] Sidenav
 * [x] Aside menu
 * [x] Syntex Higlight
 * [x] Mermaid
-* [] Latex
+* [ ] Latex
 
 ## Installation
 Clone the ClearGuide theme into the themes directory, adding it to your project as a Git submodule. As is recommanded in [Hugo getting started](https://gohugo.io/getting-started/quick-start/)
