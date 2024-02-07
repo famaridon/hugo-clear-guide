@@ -4,3 +4,6 @@ title = 'ClearGuide Doc'
 theme = "clear-guide"
 
 sectionPagesMenu = 'main'
+
+[outputs]
+home = [ "HTML", "JSON"]
