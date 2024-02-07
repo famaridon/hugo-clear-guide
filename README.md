@@ -1,8 +1,27 @@
-# Theme Name
+# ClearGuide
 
 ## Features
 
-## Installation
+[x] Search
+[x] Navbar
+[] Sidenav
+[x] Aside menu
+[x] Syntex Higlight
+[x] Mermaid
+[] Latex
+
+## Installat
+Clone the ClearGuide theme into the themes directory, adding it to your project as a Git submodule. As is recommanded in [Hugo getting started](https://gohugo.io/getting-started/quick-start/)
+
+```
+git submodule add https://github.com/famaridon/hugo-clear-guide.git themes/clear-guide`
+```
+
+Append a line to the site configuration file, indicating the current theme.
+
+```
+echo "theme = 'clear-guide'" >> hugo.toml
+```
 
 ## Configuration
 
