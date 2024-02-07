@@ -1,5 +1,5 @@
 # ClearGuide
-
+Documentation available at https://famaridon.github.io/hugo-clear-guide/
 ## Features
 
 [x] Search
@@ -10,7 +10,7 @@
 [x] Mermaid
 [] Latex
 
-## Installat
+## Installation
 Clone the ClearGuide theme into the themes directory, adding it to your project as a Git submodule. As is recommanded in [Hugo getting started](https://gohugo.io/getting-started/quick-start/)
 
 ```
