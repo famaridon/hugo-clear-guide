@@ -8,19 +8,21 @@
   </head>
   <body>
     {{ partial "navbar.html" . }}
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3 col-lg-2 p-0 bg-body-tertiary">
+    <div class="{{.Site.Param "bootstrap_container" }}">
+      <div class="row mt-3">
+        <div class="col-md-3 col-lg-2 p-0 ">
           {{ partial "sidenav.html" . }}
         </div>
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-          <div class="bg-body-tertiary p-5 rounded">
+        <main class="col-md-9 ms-sm-auto col-lg-8 px-md-4">
             {{ block "main" . }}{{ end }}
-          </div>
         </main>
+        <div class="col-lg-2 cg-toc">
+          <strong class="d-none d-md-block h6 my-2 ms-3">On this page</strong>
+          <hr class="d-none d-md-block my-2 ms-3">
+          {{- .TableOfContents }}
+        </div>
       </div>
     </div>
-
-    {{ partial "footer/js.html" . }}
+    {{ partial "footer.html" . }}
   </body>
 </html>

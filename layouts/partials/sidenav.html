@@ -1,31 +1,24 @@
-{{ $currentPage := . }} {{ $currentSection := site.GetPage
-$currentPage.Section}} {{ $activeFileUniqueID := $currentPage.File.UniqueID }}
+{{ $currentPage := . }} 
+{{ $currentSection := site.GetPage $currentPage.Section}}
 
-<div class="p-3" style="width: 280px">
-  {{- partial "inline/sidenav/walk.html" (dict "pages" $currentSection.Pages
-  "currentPage" $currentPage "activeFileUniqueID" $activeFileUniqueID) }}
+<div class="">
+  {{- partial "inline/sidenav/walk.html" (dict "pages" $currentSection.Pages "currentPage" $currentPage)  }}
 </div>
 
-{{- define "partials/inline/sidenav/walk.html" }} {{- $pages := .pages }}{{-
-$currentPage := .currentPage }}{{- $activeFileUniqueID := .activeFileUniqueID }}
+{{- define "partials/inline/sidenav/walk.html" }} 
+{{- $pages := .pages }}
+{{- $currentPage := .currentPage }}
 <ul class="list-unstyled ps-0">
   {{ range $pages }}
 
-  <li class="mb-1" id="collapse-{{.Parent.File.UniqueID}}">
+  <li class="mb-1">
     <div class="d-inline-flex ps-1">
-      <button
-        class="btn btn-toggle d-inline-flex align-items-center rounded border-0 {{ if not .Pages }}invisible{{ end }}"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapse-{{.File.UniqueID}}"
-        aria-expanded="false"
-      ></button
-      ><a class="nav-link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      <a class="nav-link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
     </div>
 
     {{- if .Pages }}
     <div class="ps-3">
-      {{- partial "inline/sidenav/walk.html" (dict "pages" .Pages "currentPage"
-      $currentPage "activeFileUniqueID" $activeFileUniqueID) }}
+      {{- partial "inline/sidenav/walk.html" (dict "pages" .Pages "currentPage" $currentPage ) }}
     </div>
     {{- end }}
   </li>

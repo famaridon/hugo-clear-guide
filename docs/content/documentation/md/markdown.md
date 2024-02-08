@@ -3,23 +3,6 @@ title = 'Markdown Guide'
 +++
 > 💡 this is a sameless copy of https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
-##### Table of Contents  
-[Headers](#headers)  
-[Emphasis](#emphasis)  
-[Lists](#lists)  
-[Links](#links)  
-[Images](#images)  
-[Code and Syntax Highlighting](#code)  
-[Footnotes](#footnotes)  
-[Tables](#tables)  
-[Blockquotes](#blockquotes)  
-[Inline HTML](#html)  
-[Horizontal Rule](#hr)  
-[Line Breaks](#lines)  
-[YouTube Videos](#videos)  
-
-<a name="headers"/>
-
 ## Headers
 
 ```no-highlight

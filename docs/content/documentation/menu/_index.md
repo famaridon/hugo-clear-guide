@@ -23,4 +23,4 @@ The sidenav is a 2 level menu build based on the site structure.
 
 ## Asidenav
 
-The asidenav is build using page title content.
+The asidenav is build using Hugo ```{{- .TableOfContents }}```

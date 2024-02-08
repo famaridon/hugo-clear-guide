@@ -5,7 +5,7 @@ title = 'Video'
 
 You can use the image tag to display video
 
-### Youtube
+## Youtube
 
 You can add a youtube video by using the embed link in image tag.
 
@@ -14,7 +14,7 @@ You can add a youtube video by using the embed link in image tag.
 ```
 ![IMAGE ALT TEXT HERE](https://www.youtube.com/embed/qhoXn4bIE1s?si=S7RRpFuBsRR3wKMz)
 
-### mp4, ogg, webm
+## mp4, ogg, webm
 
 You can display a video play for commonly support video format.
 

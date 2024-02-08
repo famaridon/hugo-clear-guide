@@ -4,13 +4,13 @@ title = 'Graph (Mermaid.js)'
 
 You can draw graph using [mermaid.js](https://mermaid.js.org/intro/getting-started.html) simply use code blocks with **mermaid** language.
 
-### Flowchart
+## Flowchart
 ```mermaid
 flowchart LR
    a --> b & c--> d
 ```
 
-### Sequence diagrams
+## Sequence diagrams
 ```mermaid
 sequenceDiagram
     Alice->>John: Hello John, how are you?
@@ -18,7 +18,7 @@ sequenceDiagram
     Alice-)John: See you later!
 ```
 
-### Class diagrams
+## Class diagrams
 
 ```mermaid
 ---
@@ -49,7 +49,7 @@ classDiagram
     }
 ```
 
-### State diagrams
+## State diagrams
 
 ```mermaid
 ---

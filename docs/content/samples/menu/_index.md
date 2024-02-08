@@ -1,4 +1,0 @@
-+++
-title = 'Menu'
-showTitle = true
-+++
