@@ -4,7 +4,7 @@ Documentation available at https://famaridon.github.io/hugo-clear-guide/
 
 * [x] Search
 * [x] Navbar
-* [ ] Sidenav
+* [x] Sidenav
 * [x] Aside menu
 * [x] Syntex Higlight
 * [x] Mermaid
@@ -15,7 +15,7 @@ Documentation available at https://famaridon.github.io/hugo-clear-guide/
 
 * [ ] Home page is empty
 * [ ] Mermaid and prism.js slow down page loging time
-* [ ] Blank page is displayed for sections need redirect
+* [x] Blank page is displayed for sections need redirect
 
 ## Installation
 Clone the ClearGuide theme into the themes directory, adding it to your project as a Git submodule. As is recommanded in [Hugo getting started](https://gohugo.io/getting-started/quick-start/)

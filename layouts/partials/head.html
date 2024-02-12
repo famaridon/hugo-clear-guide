@@ -4,4 +4,8 @@
   {{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title
   site.Title }}{{ end }}
 </title>
+{{- if and .Page.IsSection .Page.Pages -}}
+{{ $first := index .Page.Pages 0 }}
+<meta http-equiv="refresh" content="0; url={{ $first.RelPermalink}}"/>
+{{- end -}}
 {{ partialCached "head/css.html" . }}
