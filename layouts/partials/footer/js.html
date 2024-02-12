@@ -1,8 +1,11 @@
-
+{{ $page := .Page}}
 <!-- includ jsdelivr js files -->
-{{ range .Site.Params.jsdelivr.js }}
+{{- range .Site.Params.jsdelivr.js }}
+{{- $loadIf := .loadIf | default "always" }}
+{{- if or ($page.Store.Get $loadIf) (eq "always" $loadIf) -}}
 <script src="{{ .url }}" integrity="{{ .sri }}" crossorigin="anonymous"></script>
-{{ end }}
+{{- end }}
+{{- end }}
 
 <!-- include local js files -->
 {{- $jsFiles := resources.Match "js/*.js" -}}

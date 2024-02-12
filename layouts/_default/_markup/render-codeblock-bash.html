@@ -7,3 +7,5 @@
         {{ if .Attributes.output }}data-output="{{.Attributes.output}}"{{end}}
     {{ end }}>
 <code class="language-{{.Type}}" >{{- .Inner }}</code></pre>
+{{ .Page.Store.Set "hasPrism" true }}
+{{ .Page.Store.Set "hasPrismCommandLine" true }}
