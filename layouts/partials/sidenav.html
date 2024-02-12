@@ -1,25 +1,33 @@
 {{ $currentPage := . }} 
 {{ $currentSection := site.GetPage $currentPage.Section}}
 
-<div class="">
+<nav id="doc-nav" class="">
   {{- partial "inline/sidenav/walk.html" (dict "pages" $currentSection.Pages "currentPage" $currentPage)  }}
-</div>
+</nav>
 
 {{- define "partials/inline/sidenav/walk.html" }} 
 {{- $pages := .pages }}
 {{- $currentPage := .currentPage }}
-<ul class="list-unstyled ps-0">
+<ul class="list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2">
   {{ range $pages }}
 
-  <li class="mb-1">
-    <div class="d-inline-flex ps-1">
-      <a class="nav-link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-    </div>
-
+  <li class="py-2">
+    <strong class="d-flex w-100 align-items-center fw-semibold">
+      {{- if .Params.icon -}}
+      <i {{- if .Params.icon_color }} style="color: var(--bs-{{ .Params.icon_color }});"{{- end }} class="bi-{{ .Params.icon }} me-2"></i>
+      {{- end -}}
+      {{ .Title }}
+    </strong>
     {{- if .Pages }}
-    <div class="ps-3">
-      {{- partial "inline/sidenav/walk.html" (dict "pages" .Pages "currentPage" $currentPage ) }}
-    </div>
+    <ul class="list-unstyled fw-normal pb-2 small">
+      {{ range .Pages }}
+      <li>
+        <a href="{{ .RelPermalink }}" class="cg-links-link d-inline-block rounded {{ if eq $currentPage . }}active{{ end }}">
+          {{ .Title }}
+        </a>
+      </li>
+      {{- end }}
+    </ul>
     {{- end }}
   </li>
   {{ end }}

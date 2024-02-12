@@ -1,5 +1,7 @@
 +++
 title = 'Menu'
+icon= 'book-half'
+icon_color= 'indigo'
 +++
 
 # Menu configuration
