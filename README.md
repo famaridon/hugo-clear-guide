@@ -14,7 +14,7 @@ Documentation available at https://famaridon.github.io/hugo-clear-guide/
 ## Bugs
 
 * [ ] Home page is empty
-* [ ] Mermaid and prism.js slow down page loging time
+* [x] Mermaid and prism.js slow down page loging time
 * [x] Blank page is displayed for sections need redirect
 
 ## Installation
