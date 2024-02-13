@@ -8,13 +8,13 @@ Documentation available at https://famaridon.github.io/hugo-clear-guide/
 * [x] Aside menu
 * [x] Syntex Higlight
 * [x] Mermaid
-* [x] Use pretty font
-* [x] Use emoji font
+* [ ] Use pretty font
+* [ ] Use emoji font
 * [ ] Link to sugest changes
   
 ## Bugs
 
-* [ ] Home page is empty
+* [x] Home page is empty
 * [x] Mermaid and prism.js slow down page loging time
 * [x] Blank page is displayed for sections need redirect
 
