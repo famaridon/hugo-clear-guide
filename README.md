@@ -8,7 +8,8 @@ Documentation available at https://famaridon.github.io/hugo-clear-guide/
 * [x] Aside menu
 * [x] Syntex Higlight
 * [x] Mermaid
-* [ ] Latex
+* [x] Use pretty font
+* [x] Use emoji font
 * [ ] Link to sugest changes
   
 ## Bugs
