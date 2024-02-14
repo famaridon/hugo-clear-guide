@@ -11,11 +11,11 @@ The top navbar is build using the **main** menu.  7
 
 Site configuration
 
-| Name                 | default | description                                                      |
-| -------------------- | ------- | ---------------------------------------------------------------- |
-| navbar.display_title | false   | configure if the theme add the site title in the navbar          |
-| navbar.display_logo  | true    | configure if the theme add the site logo in the navbar           |
-| navbar.display_search        | true    | configure if the search is enabled (json render must be enabled) |
+| Name                  | default | description                                                      |
+| --------------------- | ------- | ---------------------------------------------------------------- |
+| navbar.display_title  | false   | configure if the theme add the site title in the navbar          |
+| navbar.display_logo   | true    | configure if the theme add the site logo in the navbar           |
+| navbar.display_search | true    | configure if the search is enabled (json render must be enabled) |
 
 In the site configuration you can choose to display the sit
 

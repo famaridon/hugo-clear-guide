@@ -1,3 +1,3 @@
 +++
-title = 'Documenation'
+title = 'Documentation'
 +++
