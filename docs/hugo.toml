@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'ClearGuide Doc'
+title = 'ClearGuide'
 theme = "clear-guide"
 
 sectionPagesMenu = 'main'
