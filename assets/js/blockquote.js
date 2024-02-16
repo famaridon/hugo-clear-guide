@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.querySelectorAll("blockquote").forEach((blockquote) => {
     blockquote.classList.add("alert");
     if (blockquote.innerText.startsWith("ℹ")) {
-      blockquote.classList.add("alert-primary");
+      blockquote.classList.add("alert-secondary");
     } else if (blockquote.innerText.startsWith("📎")) {
-      blockquote.classList.add("alert-primary");
+      blockquote.classList.add("alert-success");
     } else if (blockquote.innerText.startsWith("❓")) {
       blockquote.classList.add("alert-primary");
     } else if (blockquote.innerText.startsWith("⚠")) {
