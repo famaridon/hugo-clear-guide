@@ -28,7 +28,7 @@
 <iframe width="560" height="315" src="{{ .Destination }}" title="{{ .Title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 {{- else -}}
-<img src="{{ .Destination }}" alt="{{ .Text }}" />
+<img src="{{ .Destination }}" class="img-fluid" alt="{{ .Text }}" />
 {{- end -}}
 {{- if .Title -}}
 <figcaption>{{ .Title }}</figcaption>
