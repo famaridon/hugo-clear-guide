@@ -1,0 +1,9 @@
+:root,
+[data-bs-theme=light],
+[data-bs-theme=dark] {
+    --cg-violet-rgb: 112.520718, 44.062154, 249.437846;
+    --cg-sidebar-link-bg: rgba(var(--cg-violet-rgb), .1);
+    --bs-font-sans-serif: "Roboto", "NotoColorEmoji";
+    --bs-font-monospace:  "Fira Code", monospace;
+    --bs-body-font-family: var(--bs-font-sans-serif);
+}
