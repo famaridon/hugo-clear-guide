@@ -11,6 +11,7 @@ Documentation available at https://famaridon.github.io/hugo-clear-guide/
 * [x] Use pretty font
 * [x] Use emoji font
 * [ ] Link to sugest changes
+* [ ] Light / Dark Theme
   
 ## Bugs
 
