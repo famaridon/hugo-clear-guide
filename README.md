@@ -12,12 +12,15 @@ Documentation available at https://famaridon.github.io/hugo-clear-guide/
 * [x] Use emoji font
 * [ ] Link to sugest changes
 * [ ] Light / Dark Theme
+* [ ] Auto language detection
+* [ ] Side nav must be fixed
   
 ## Bugs
 
 * [x] Home page is empty
 * [x] Mermaid and prism.js slow down page loging time
 * [x] Blank page is displayed for sections need redirect
+* [ ] "On this page" have horizontal scrollbar when text can't be wrapped
 
 ## Installation
 Clone the ClearGuide theme into the themes directory, adding it to your project as a Git submodule. As is recommanded in [Hugo getting started](https://gohugo.io/getting-started/quick-start/)
