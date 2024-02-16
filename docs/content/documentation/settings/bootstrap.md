@@ -2,6 +2,6 @@
 title = 'Bootstrap'
 +++
 
-You can configure bootstrap.
+You can configure bootstrap CSS variables.
 
 // TODO.
