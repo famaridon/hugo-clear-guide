@@ -1,4 +1,22 @@
-{{- with resources.Get "css/main.css" }} 
+{{- range .Site.Params.jsdelivr.css }}
+<link
+  href="{{ .url }}"
+  rel="stylesheet"
+  integrity="{{ .integrity }}"
+  crossorigin="anonymous"
+/>
+{{- end -}}
+
+{{- with resources.Get "css/main.css" -}} 
+  {{- if eq hugo.Environment "development" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" />
+  {{- else }} 
+    {{- with . | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- with resources.Get "css/bootstrap-variables.css" }} 
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" />
   {{- else }} 
@@ -7,13 +25,3 @@
     {{- end }}
   {{- end }}
 {{- end }}
-
-{{ range .Site.Params.jsdelivr.css }}
-<link
-  href="{{ .url }}"
-  rel="stylesheet"
-  integrity="{{ .integrity }}"
-  crossorigin="anonymous"
-/>
-{{ end }}
-

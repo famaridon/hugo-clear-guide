@@ -1,8 +1,3 @@
-:root, [data-bs-theme="light"] {
-    --cg-violet-rgb: 112.520718,44.062154,249.437846;
-    --cg-sidebar-link-bg: rgba(var(--cg-violet-rgb), .1);
-}
-
 .cg-navbar {
     padding: 0.75rem 0;
     background-color: transparent;
@@ -61,4 +56,10 @@
 #doc-nav .cg-links-link:hover, #doc-nav .cg-links-link:focus, #doc-nav .cg-links-link.active {
     color: var(--bs-emphasis-color);
     background-color: var(--cg-sidebar-link-bg);
+}
+
+code[class*=language-],
+pre[class*=language-] {
+    font-family: var(--bs-font-monospace);
+    font-variant-ligatures: additional-ligatures;
 }
