@@ -4,7 +4,7 @@
 <nav class="navbar navbar-expand-lg navbar sticky-top cg-navbar">
   <div class="{{.Site.Param "bootstrap_container" }}">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-white text-decoration-none">
-        {{- if $navbar.display_logo }}<img src="{{ .Site.BaseURL | default "/" }}images/logo.png" class="bi me-2" width="40" height="32"></img>{{- end }}
+        {{- if $navbar.display_logo }}{{ partial "logo.html" . }}{{- end }}
         {{- if $navbar.display_title }}<span class="fs-4">{{ .Site.Title }}</span>{{- end }}
     </a>
     <button
