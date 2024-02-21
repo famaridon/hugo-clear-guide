@@ -1,7 +1,7 @@
 {{ $currentPage := . }} 
 {{ $currentSection := site.GetPage $currentPage.Section}}
 
-<nav id="doc-nav" class="">
+<nav id="doc-nav" class="cg-sidenav">
   {{- partial "inline/sidenav/walk.html" (dict "pages" $currentSection.Pages "currentPage" $currentPage)  }}
 </nav>
 
