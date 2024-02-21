@@ -11,19 +11,25 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (searchInput) {
     searchInput.addEventListener("keyup", async () => {
-      const results = await search(searchInput.value);
-      searchResults.innerHTML = "";
-          results.forEach((result) => {
-            const doc = window.searchData[result.ref];
-            const link = document.createElement("a");
-            link.classList.add("list-group-item");
-            link.href = doc.uri;
-            link.innerText = doc.title;
-            searchResults.appendChild(link);
-          });
+    const results = await search(searchInput.value);
+    searchResults.innerHTML = "";
+    results.forEach((result) => {
+      const doc = window.searchData[result.ref];
+      const link = document.createElement("a");
+      const title = document.createElement("h5"); // Add subtitle element
+      const subtitle = document.createElement("small"); // Add subtitle element
+      link.classList.add("list-group-item");
+      link.href = doc.uri;
+      title.innerText = doc.title;
+      subtitle.innerText = doc.path; // Set subtitle text to result path
+      searchResults.appendChild(link);
+      link.appendChild(title); // Append subtitle element
+      link.appendChild(subtitle); // Append subtitle element
     });
-  }
+  });
+}
 });
+        
 
 // search funtion using lunr.js
 const search = async (query) => {
@@ -38,6 +44,7 @@ const search = async (query) => {
       this.field("content");
       this.field("tags");
       this.field("uri");
+      this.field("path");
       window.searchData.forEach((doc, index) => {
         this.add({...doc, id: index});
       });
