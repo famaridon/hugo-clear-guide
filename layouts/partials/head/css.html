@@ -4,6 +4,7 @@
   rel="stylesheet"
   integrity="{{ .integrity }}"
   crossorigin="anonymous"
+  {{ if .theme }}data-cg-theme="{{ .theme }}" disabled{{ end }}
 />
 {{- end -}}
 
@@ -25,3 +26,5 @@
     {{- end }}
   {{- end }}
 {{- end }}
+
+{{ partial "head/css-vars.html" . }}

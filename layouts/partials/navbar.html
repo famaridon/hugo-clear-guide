@@ -3,7 +3,7 @@
 {{ $navbar := $menuSettings.navbar }}
 <nav class="navbar navbar-expand-lg navbar sticky-top cg-navbar">
   <div class="{{.Site.Param "bootstrap_container" }}">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-white text-decoration-none">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto cg-home-link">
         {{- if $navbar.display_logo }}{{ partial "logo.html" . }}{{- end }}
         {{- if $navbar.display_title }}<span class="fs-4">{{ .Site.Title }}</span>{{- end }}
     </a>
@@ -41,12 +41,49 @@
       </ul>
       <div class="nav-item">
         {{- if $navbar.display_search }}
-        <button type="button" id="searchButton" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#searchModal">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-</svg> Search
+        <button type="button" id="searchButton" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#searchModal">
+          <i class="bi bi-search"></i> Search
         </button>
         {{- end }}
+      </div>
+      <div class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+        <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+        <hr class="d-lg-none my-2 text-white-50">
+      </div>
+      <div class="nav-item dropdown">
+        <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+                id="bd-theme"
+                type="button"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+                data-bs-display="static"
+                aria-label="Toggle theme (auto)">
+          <i class="bi my-1 theme-icon-active bi-circle-half" data-cg-theme-icon="circle-half"></i>
+          <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+              <i class="bi me-2 opacity-50 bi-sun-fill" data-cg-theme-icon="sun-fill"></i>
+              Light
+              <i class="bi ms-auto d-none bi-check2"></i>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+              <i class="bi me-2 opacity-50 bi-moon-stars-fill" data-cg-theme-icon="moon-stars-fill"></i>
+              Dark
+              <i class="bi ms-auto d-none bi-check2"></i>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+              <i class="bi me-2 opacity-50 bi-circle-half" data-cg-theme-icon="circle-half"></i>
+              Auto
+              <i class="bi ms-auto d-none bi-check2"></i>
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
