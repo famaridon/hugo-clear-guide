@@ -11,7 +11,7 @@ Documentation available at https://famaridon.github.io/hugo-clear-guide/
 * [x] Use pretty font
 * [x] Use emoji font
 * [ ] Link to sugest changes
-* [ ] Light / Dark Theme
+* [x] Light / Dark Theme
 * [ ] Auto language detection
 * [ ] Side nav must be fixed
   
