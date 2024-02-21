@@ -22,8 +22,8 @@
     <ul class="list-unstyled fw-normal pb-2 small">
       {{ range .Pages }}
       <li>
-        <a href="{{ .RelPermalink }}" class="cg-links-link d-inline-block rounded {{ if eq $currentPage . }}active{{ end }}">
-          {{ .Title }}
+        <a href="{{ .RelPermalink }}" class="cg-links-link d-inline-block rounded {{ if eq $currentPage . }}active{{ end }}"
+        >{{ .Title }} {{- if .Pages }}<i class="bi bi-exclamation-circle-fill ms-2 text-warning" title="Hidden content"></i>{{- end -}}
         </a>
       </li>
       {{- end }}
